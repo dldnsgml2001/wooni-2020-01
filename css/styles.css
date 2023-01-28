@@ -33,15 +33,39 @@ body {
 #login-form input {
   font-size: 18px;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
   padding: 15px 0px;
   margin-bottom: 25px;
-  transition: border-color 0.3s ease-in-out;
 }
-#login-form input::placeholder {
+#login-form input:not([type="submit"]) {
+  transition: border-color 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+<!
+  인풋
+  type이
+  submit이
+  아닐때에만
+  밑에
+  코드들이
+  적용됨
+  > #login-form
+  input::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 
 #login-form input:focus {
   border-color: var(--yellow);
+}
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit; <! 부모로부터 상속받다를 의미 앵커가 로그인폼의 색깔을 물려받음>
+  font-size: 13px;
 }
