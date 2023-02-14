@@ -1,0 +1,29 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--horizontal-space);
+  position: sticky;
+  top: 0;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.screen__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+.screen__icons span {
+  margin-left: 25px;
+}
+
+@keyframes rotatecog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen__icons .six-gear-rotate:hover {
+  animation: rotatecog 1s linear infinite;
+}

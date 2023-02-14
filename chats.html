@@ -2,12 +2,15 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="css/styles.css" />
-
-    <! css 폴더 안에 있기때문, link:css 치면 바로 나옴>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends - to Kokoa Clone</title>
+    <title>Chats - to Kokoa Clone</title>
+    <link
+      rel="shortcut icon"
+      sizes="16x16 32x32 64x64"
+      href="screenshots/logo1.jpg"
+    />
   </head>
   <body>
     <div class="status-bar">
@@ -16,21 +19,20 @@
         <iconify-icon icon="material-symbols:wifi"></iconify-icon>
       </div>
       <div class="status-bar__column">
-        <span>18:43</span>
+        <span>21:23</span>
       </div>
       <div class="status-bar__column">
-        <span>110%</span>
-        <span
-          class="iconify"
-          data-icon="material-symbols:battery-horiz-075-sharp"
-          data-width="24"
-          data-rotate="180deg"
-        ></span>
-        <span class="iconify" data-icon="mingcute:lightning-fill"></span>
+        <span>100%</span>
+        <iconify-icon
+          icon="material-symbols:battery-full-alt"
+          width="24"
+          height="24"
+          rotate="180deg"
+        ></iconify-icon>
       </div>
     </div>
     <header class="screen-header">
-      <h1 class="screen__title">Friends</h1>
+      <h1 class="screen__title">Chats</h1>
       <div class="screen__icons">
         <span
           ><iconify-icon
@@ -39,6 +41,13 @@
             height="35px"
           ></iconify-icon
         ></span>
+        <span>
+          <iconify-icon
+            icon="ci:message-plus-alt"
+            width="35"
+            height="35"
+          ></iconify-icon>
+        </span>
         <span
           ><iconify-icon
             icon="ph:music-notes-light"
@@ -59,85 +68,49 @@
       </div>
     </header>
 
-    <a id="friends-display-link"
-      ><iconify-icon
-        icon="material-symbols:info"
-        width="20"
-        height="20"
-      ></iconify-icon>
-      Friends' Names Display
-      <iconify-icon
-        icon="material-symbols:chevron-right"
-        width="20"
-        height="20"
-      ></iconify-icon
-    ></a>
-    <main class="friends-screen">
-      <div class="user-component">
-        <div class="user-component__column">
-          <img
-            src="screenshots/logo1.jpg"
-            class="user-component__avatar user-component__avatar--xl"
-          />
-          <div class="user-component__text">
-            <h4 class="user-component__title">Diego</h4>
-            <!--<h6 class="user-component__subtitle">this text whatever</h6>  -->
-          </div>
-        </div>
-        <div class="user-component__column"></div>
-      </div>
-      <div class="friends-screen__channel">
-        <div class="friends-screen__channel-header">
-          <span>Channel</span>
-          <iconify-icon
-            icon="material-symbols:chevron-right"
-            width="20"
-            height="20"
-            rotate="270deg"
-          ></iconify-icon>
-        </div>
+    <main class="main-screen">
+      <a href="chat.html">
         <div class="user-component">
           <div class="user-component__column">
             <img
               src="screenshots/logo1.jpg"
-              class="user-component__avatar user-component__avatar--sm"
+              class="user-component__avatar user-component__avatar"
             />
             <div class="user-component__text">
-              <h4 class="user-component__title user-component__title--not-bold">
-                Channel
-              </h4>
+              <h4 class="user-component__title">Diego</h4>
+              <h6 class="user-component__subtitle">
+                Please check My Kakao Account Info
+              </h6>
             </div>
           </div>
           <div class="user-component__column">
-            <div>
-              <span>2</span>
-              <iconify-icon
-                icon="material-symbols:chevron-right"
-                width="25"
-                height="25"
-              ></iconify-icon>
-            </div>
+            <span class="user-component__time"> 21:22 </span>
+            <div class="badge">1</div>
           </div>
         </div>
-      </div>
+      </a>
     </main>
 
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
-          <a class="nav__link" href="#"
-            ><iconify-icon icon="mdi:user" width="50" height="50"></iconify-icon
-          ></a>
+          <a class="nav__link" href="friends.html">
+            <iconify-icon
+              icon="mdi:user-outline"
+              width="50"
+              height="50"
+            ></iconify-icon>
+          </a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="chats.html">
             <span class="nav__notification badge">1</span>
             <iconify-icon
-              icon="tabler:message-circle-2"
+              icon="tabler:message-circle-2-filled"
               width="50"
               height="50"
-            ></iconify-icon
-          ></a>
+            ></iconify-icon>
+          </a>
         </li>
         <li class="nav__btn">
           <a class="nav__link" href="find.html"
@@ -160,17 +133,9 @@
         </li>
       </ul>
     </nav>
-    <div id="splash-screen">
-      <iconify-icon
-        icon="tabler:message-circle-2-filled"
-        width="132"
-        height="132"
-      ></iconify-icon>
-    </div>
     <div id="no-mobile">
       <span>Your Screen is too big ㅠㅠ</span>
     </div>
-
     <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
   </body>

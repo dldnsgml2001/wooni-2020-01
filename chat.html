@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with Nico - to Kokoa Clone</title>
+    <link
+      rel="shortcut icon"
+      sizes="16x16 32x32 64x64"
+      href="screenshots/logo1.jpg"
+    />
+  </head>
+  <body id="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <iconify-icon icon="material-symbols:wifi"></iconify-icon>
+      </div>
+      <div class="status-bar__column">
+        <span>21:23</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <iconify-icon
+          icon="material-symbols:battery-full-alt"
+          width="24"
+          height="24"
+          rotate="180deg"
+        ></iconify-icon>
+      </div>
+    </div>
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html">
+          <iconify-icon
+            icon="uil:angle-left-b"
+            width="60"
+            height="60"
+          ></iconify-icon>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Nicolas Serrano</h1>
+      </div>
+      <div class="alt-header__column">
+        <span class="alt-header__column-son"
+          ><iconify-icon
+            icon="material-symbols:search"
+            width="60"
+            height="60"
+          ></iconify-icon
+        ></span>
+        <span
+          ><iconify-icon
+            icon="icon-park:hamburger-button"
+            width="60"
+            height="60"
+          ></iconify-icon
+        ></span>
+      </div>
+    </header>
+
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Tuesday, June 30, 2020</div>
+
+      <div class="message-row">
+        <img
+          src="file:///C:/Users/LWH/Desktop/wooni-2020-01/screenshots/logo1.jpg"
+        />
+        <div class="message-row__content">
+          <span class="message__author">Nicolas </span>
+          <div class="message__info">
+            <span class="message__bubble">Hi!</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">Hi! Nice to meet you!</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <form class="reply">
+      <div class="reply__column">
+        <iconify-icon
+          icon="bi:plus-square"
+          width="30"
+          height="30"
+        ></iconify-icon>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message..." />
+        <iconify-icon
+          class="smile"
+          icon="bi:emoji-smile"
+          width="28"
+          height="28"
+        ></iconify-icon>
+        <button>
+          <iconify-icon
+            icon="material-symbols:arrow-downward-rounded"
+            width="34"
+            height="34"
+            rotate="180deg"
+          ></iconify-icon>
+        </button>
+      </div>
+    </form>
+
+    <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  </body>
+</html>

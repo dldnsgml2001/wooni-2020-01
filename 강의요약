@@ -7,3 +7,67 @@
 - method는 2가지 방식 중 하나를 쓸 수 있다. 하나는 POST이고, 다른 하나는 GET이다.
 - POST는 백엔드 서버에 정보를 전송하는 방식이라 이번 강의에서는 사용할 수 없다.
 - GET 방식은 보안에 취약하다. username이랑 password를 GET 방식으로 보내선 안된다. URL에 포함되어도 상관없는 정보들을 GET 방식으로 보내는 것이다.
+
+- navigation 안의 ul 안에 많은 li들로 구성되는데, 검색엔진 구글도 navigation을 찾아서 ul의 li 안에 있는 link를 가져오게끔 설정되어 있다.
+- VSC의 단축키로 navigation에서 하위메뉴까지 한번에 자동 완성 시킬 수 있다.
+→ nav>il>li*(필요한 갯수)>a
+→ 그 후 #과 tab만으로 간편하게 작성이 가능하다.(수정하다보면 다음 tab이 옳게 먹히지 않는다.)
+- 점 3개는 ellipsis라고 한다.
+- 속성과 class 이름이 똑같아도 상관없다.
+- 메인 styles.css에 다른 요소의 css를 import 할 때, 순서를 지키는 것이 정말 중요하다.
+box-sizing: border-box padding을 주면 css에서 box사이즈를 늘려버리는데, 이걸 늘리지 말라 달라는 명령어
+사각형을 원으로 만들고 싶다면 width의 반은 radious값으로 하면됨
+position: absolute는 가장 가까운 relative를 가진 부모 기준으로 움직이는거임
+block : 한 줄 모두 차지 (대표 element - <div>, <p> )
+inline : 콘텐츠 크기 만큼만 차지 (대표 element - <span>)
+sticky 속성은 상, 하, 좌, 우 주어진 값이 임계치에 도달할 경우 그 자리에 고정되는 속성이라고 합니다.
+text-align:center : 텍스트형식의 엘리먼트를 가운데로 정렬하는 형태입니다. ex) html(p , h1~h7) 등등
+이렇게 쓰는 이유는 텍스트 엘리먼트는 display 형식이 먹히지 않기 때문
+ 본인이 flex의 개념을 이해하고있는지 테스트하고 싶다면 7:12에서 멈추고 직접 만들어보자.
+flex의 영향을 받고싶지 않은 녀석들은 div를 하나 더씌워서 부모-자식관계를 끊고 부모-손자 관계를 만든다.
+text-transform: uppercase; <<-- 모든 글자 대문자
+
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+자구 같이 쓰는 조합
+
+position absolute는 position relative father가 꼭필요하다
+space-between이 글자 수에 따라서 배열이 중앙 정열이 안된다는 점 지난 강의에서 들었던거 기억 하시죠? 
+auto를 쓰시면 글자 수와 무관하게 중앙 정열이 됩니다.
+
+
+box-sizing 박스의 크기를 어떤 것을 기준으로 계산할지를 정하는 속성이다.
+border-box : 테두리를 기준으로 크기를 정한다.
+포지션 fixed를 했을때 배열이 무너지면 일단 넓이를 100%, 박스 사이징 위에처럼 하고.
+alt-header__column의 넓이를 33% 
+
+맨오른쪽 두개를 요렇게 지정 css에서
+display: flex;
+justify-content: flex-end;
+
+중간거는 텍스트라서 텍스트 어라인 센터로 지정 해주면 됨.
+chat-screen .alt-header  <<--  둘다 픽스면 붙어버리는데 그떄 statusbar의 top을 주면됨
+  top: 20px;
+
+
+  z-index 기본적으로 div가 있는 위치가 맨 앞에서부터 몇 번째인지를 나타냄
+  즉, layer의 순서가 몇 번째인지를 나타내는 거야
+  디폴트값은 0
+  즉, 서로 다른 layer가 되는거임 높을수록 위에감
+
+  포지션을 fixed하면 이전의 box들과는 다른 layer이 됨
+
+
+width를 주지않으면 컨텐츠 크기만큼만 적용되서 flex박스에 끌려다니는데 width를 100%주면 화면 폭만큼의 크기를갖고
+message-row자체는 flex박스의 영향을 받지만 내부컨텐츠인 img나 message-row내부 자식들은 직접적인 영향을 받지않아서 디폴트로 좌측에 정렬되는것같습니다
+
+
+order은 flex children에게만 적용됨순서를 바꾸는 첫번째 방법
+1. CSS에서 visibility: hidden; 으로 HTML을 화면, 마우스로부터 숨길 수는 있음. 완전히 사라지는 것은 아님. 완전히 사라지게 하려면 js를 이용해야함
+2. animation의 마지막 값을 기억하고 싶다면 forwards 를 입력한다. → 마지막 keyframes를 기억한다. ex animation: hideSplashScreen 0.4s ease-in-out forwards;
+3. animation-delay : Ns; →animation 동작을 지연 시킴. 즉 N초 뒤에 animation효과 작동
+
+hover는 마우스 커서 올리면 작동함
+ will-change는 애니메이션이 좀 더 부드럽게 동작할 수 있게 한다. → 브라우저에게 어떤 것이 변할 것인지 예고해주는 것
+- will-change는 그래픽 카드를 이용해서 애니메이션을 가속화 한다.
